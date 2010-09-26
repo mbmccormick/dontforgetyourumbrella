@@ -1,0 +1,124 @@
+body
+{
+    font-family: helvetica;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+h1
+{
+    font-size: 80px;
+    padding: 0px;
+    margin: 0px;
+}
+
+h2
+{
+    padding: 0px;
+    margin: 0px;
+    color: #7cd136;
+}
+
+a
+{
+    text-decoration: none;
+    color: #cccccc;
+}
+
+p
+{
+    color: #000000;
+}
+
+p a
+{
+    color: #000000;
+}
+
+h2 a
+{
+    text-decoration: none;
+    color: #7cd136;
+}
+
+input[type=text]
+{
+    font-size: 80px;
+    color: #696969;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-transform: uppercase;
+}
+
+select
+{
+    font-size: 80px;
+    color: #696969;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-transform: uppercase;
+}
+
+input[type=submit]
+{
+    font-size: 80px;
+    color: #ffffff;
+    background-color: #696969;
+    font-family: helvetica;
+    text-transform: uppercase;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input[type=submit]:hover
+{
+    background-color: #000000;
+}
+
+.blue
+{
+    color: #248eff;
+}
+
+.yellow
+{
+    color: #f5db1b;
+}
+
+.light
+{
+    color: #cccccc;
+}
+
+.red
+{
+    color: #ed1c1c;
+}
+
+.green
+{
+    color: #7CD136;
+}
+
+.pink
+{
+    color: #eb1386;
+}
+
+.orange
+{
+    color: #ff8521;
+}
+
+.fuscia
+{
+    color: #36c7a7;
+}
+
+.purple
+{
+    color: #b417e8;
+}

@@ -1,30 +1,30 @@
-# tweatherbot
+# dontforgetyourumbrella
 
-Twitter API integration delivering local weather reports throughout the day.
+Simple weather forecasting and precipitation predication.
 
 
 ## Requirements
 
-tweatherbot is a small Google AppEngine service that publishes local weather reports to Twitter.
+dontforgetyourumbrella is a small web application that retreives weather forecat information from Weather Undergroung and makes predictions on whether or not you will need an umbrella for a specific day. It also geolocates the user based on their IP address. Text message notifications are sent out using Twilio.
 
 
 ## Installation
 
-This service is designed to be run on the Google AppEngine development platform. The scripts and configuration files can only be run from a desktop environment through the use of the Google AppEngine SDK.
+This service is designed to be run on a LAMP development platform. The scripts and configuration files cannot be run through a desktop environment. Once cron job is also needed in order to keep the application running.
 
-Twitter account information, for the robots, and associated Weather Underground iCal feeds are stored in the GQL datastores on Google AppEngine. This allows for more robots to be added, without having to rebuild or modify the tweatherbot service.
+User account information, including cell phone numbers and zip codes, are stored in one MySQL database.
 
 
 ## Usage
 
-This service is self-sustaining, meaning that once the scripts and configuration files are loaded on the Google AppEngine servers, no additional maintenance or overhead is necessary.
+This application is self-sustaining, meaning that once the scripts and configuration files are loaded on a LAMP server, no additional maintenance or overhead is necessary.
 
-tweatherbot pings Weather Underground's iCal feeds for the latest forecasts and publishes new reports when an update is available.
+dontforgetyourumbrella will check Weather Underground daily for forecast information and precipitation predictions, notifying users according to their location and preferences.
 
 
 ## Disclaimer
 
-Use this service at your own risk. While this service has been tested thoroughly, on the above requirements, your mileage may vary. I take no responsibility for any harmful actions this service might cause.
+Use this application at your own risk. While this application has been tested thoroughly, on the above requirements, your mileage may vary. I take no responsibility for any harmful actions this application might cause.
 
 
 ## License

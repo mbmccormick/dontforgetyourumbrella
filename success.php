@@ -5,28 +5,12 @@
     <link rel="stylesheet" href="inc/stylesheet.css" />
     <script type="text/javascript" src="inc/util-functions.js"></script>
     <script type="text/javascript" src="inc/clear-default-text.js"></script>
+    <meta http-equiv="refresh" content="5; url=http://dontforgetyourumbrella.com/index.php" />
 <body>
     <?php
         
         include("service.php");
-        
-        if ($pop != null)
-        {
-            echo "<h1><span class='light'>there is a " . $pop . "% chance of <a href='index.php'>precipitation</a> today in " . $city . ", " . $state . ".</span> ";
-            if ($pop >= 40)
-            {
-                echo "bring your <span class='purple'>umbrella</span>.</h1>\n";
-            }
-            else
-            {
-                echo "leave your <span class='purple'>umbrella</span> at home.</h1>\n";
-            }
-            textlink();
-        }
-        else
-        {
-            error();
-        }
+        success();
         
     ?>
     <br />

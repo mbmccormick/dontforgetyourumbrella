@@ -1,0 +1,17 @@
+<?php
+
+    // twilio API settings
+    $ApiVersion = "2010-04-01";
+    $AccountSid = "AC********************************";
+	$AuthToken = "********************************";
+    
+    // twilio phone number
+    $PhoneNumber = "***-***-****";
+    
+    // database configuration
+    $Server = "yourserver.com";
+    $Username = "yourusername";
+    $Password = "yourpassword";
+    $Database = "yourdatabase";
+    
+?>

@@ -9,7 +9,12 @@
     <?php
         
         include("service.php");
-
+        
+        $wunderapi = simplexml_load_file("http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=" . $zipcode);
+        $pop = $wunderapi->simpleforecast->forecastday[1]->pop;
+        $cond = $wunderapi->simpleforecast->forecastday[1]->conditions;
+        $high = $wunderapi->simpleforecast->forecastday[1]->high->fahrenheit;
+            
         if ($pop != null)
         {
             if ($pop >= 40)
@@ -24,8 +29,8 @@
                     if (substr($cond, strlen($cond) - 1, 1) == "m")
                         $cond = $cond . "s";
                 }
-                echo "<h1><span class='light'>" . $prefix . " <a href='probability.php'>" . $cond . "</a> with a high of " . $high . "&deg;F <a href='tomorrow.php'>today</a> in " . $city . ", " . $state . ".</span> ";
-                echo "bring your <span class='blue'>umbrella</span>.</h1>\n";
+                echo "<h1><span class='light'>" . $prefix . " " . $cond . " with a high of " . $high . "&deg;F <a href='index.php'>tomorrow</a> in " . $city . ", " . $state . ".</span> ";
+                echo "bring your <span class='fuscia'>umbrella</span>.</h1>\n";
             }
             else
             {
@@ -38,8 +43,8 @@
                 {
                     $prefix = "there will be a ";
                 }
-                echo "<h1><span class='light'>" . $prefix . " <a href='probability.php'>" .  $cond . "</a> with a high of " . $high . "&deg;F <a href='tomorrow.php'>today</a> in " . $city . ", " . $state . ".</span> ";
-                echo "leave your <span class='yellow'>umbrella</span> at home.</h1>\n";
+                echo "<h1><span class='light'>" . $prefix . " " .  $cond . " with a high of " . $high . "&deg;F <a href='index.php'>tomorrow</a> in " . $city . ", " . $state . ".</span> ";
+                echo "leave your <span class='fuscia'>umbrella</span> at home.</h1>\n";
             }	
             textlink();
         }
