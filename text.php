@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <title>dontforgetyourumbrella.com</title>
-    <link rel="stylesheet" href="inc/stylesheet.css" />
-    <script type="text/javascript" src="inc/util-functions.js"></script>
-    <script type="text/javascript" src="inc/clear-default-text.js"></script>
+    <link rel="stylesheet" href="/inc/stylesheet.css" />
+    <script type="text/javascript" src="/inc/util-functions.js"></script>
+    <script type="text/javascript" src="/inc/clear-default-text.js"></script>
 <body>
     <?php
         
@@ -13,14 +13,33 @@
         if (strlen($zipcode) == 0)
             $zipcode = "(zip)";
 
-        echo "<form action='submit.php' method='post'>";
-        echo "<h1><span class='light'>A text message will be sent to <input name='phonenumber' type='text' class='cleardefault' style='width: 460px;' value='(phone)' /> at ";
-        echo "<select name='time'><option default='true'>(time)</option><option value='6'>6am</option><option value='7'>7am</option><option value='8'>8am</option><option value='9'>9am</option><option value='10'>10am</option></select> ";
-        echo "<select name='timezone'><option default='true'>(zone)</option><option value='5'>est</option><option value='6'>cst</option><option value='7'>mst</option><option value='8'>pst</option></select> ";
-	echo "whenever you need an <span class='pink'>umbrella</span> in <input type='text' name='zipcode' value='$zipcode' style='width: 240px;' class='cleardefault' />.</span> <input type='submit' value='Submit' /></h1>";        
-        echo "</form>";
+        
         
     ?>
+	<form action='/submit.php' method='post'>
+        <h1>
+			<span class='light'>A text message will be sent to 
+			<input name='phonenumber' type='text' class='cleardefault' style='width: 460px;' value='(phone)' /> at 
+			<select name='time'>
+				<option default='true'>(time)</option>
+				<option value='6'>6am</option>
+				<option value='7'>7am</option>
+				<option value='8'>8am</option>
+				<option value='9'>9am</option>
+				<option value='10'>10am</option>
+			</select> 
+			<select name='timezone'>
+				<option default='true'>(zone)</option>
+				<option value='5'>est</option>
+				<option value='6'>cst</option>
+				<option value='7'>mst</option>
+				<option value='8'>pst</option>
+			</select> 
+			whenever you need an <span class='pink'>umbrella</span> in 
+			<input type='text' name='zipcode' value='<?php echo $zipcode; ?>' style='width: 240px;' class='cleardefault' />.</span> 
+			<input type='submit' value='Submit' />
+		</h1>       
+    </form>
     <br />
     <br />
     <p>Copyright &copy; 2010 <a style="text-decoration: none;" href="http://www.mccormicktechnologies.com/" target="_blank">McCormick Technologies LLC</a>. All rights reserved.</p>

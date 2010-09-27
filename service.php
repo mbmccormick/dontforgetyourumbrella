@@ -36,7 +36,7 @@
     
     function textlink()
     {
-        echo "<br /><br /><h2><a href='text.php'>Sign up for text message notifications.</a></h2><br />";
+        echo "<br /><br /><h2><a href='/text'>Sign up for text message notifications.</a></h2><br />";
     }
     
     function error()

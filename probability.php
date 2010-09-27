@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <title>dontforgetyourumbrella.com</title>
-    <link rel="stylesheet" href="inc/stylesheet.css" />
-    <script type="text/javascript" src="inc/util-functions.js"></script>
-    <script type="text/javascript" src="inc/clear-default-text.js"></script>
+    <link rel="stylesheet" href="/inc/stylesheet.css" />
+    <script type="text/javascript" src="/inc/util-functions.js"></script>
+    <script type="text/javascript" src="/inc/clear-default-text.js"></script>
 <body>
     <?php
         
@@ -12,7 +12,7 @@
         
         if ($pop != null)
         {
-            echo "<h1><span class='light'>there is a " . $pop . "% chance of <a href='index.php'>precipitation</a> today in " . $city . ", " . $state . ".</span> ";
+            echo "<h1><span class='light'>there is a " . $pop . "% chance of <a href='/'>precipitation</a> today in " . $city . ", " . $state . ".</span> ";
             if ($pop >= 40)
             {
                 echo "bring your <span class='purple'>umbrella</span>.</h1>\n";
