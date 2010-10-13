@@ -31,6 +31,17 @@
             $cond = $wunderapi->simpleforecast->forecastday[0]->conditions;
             $high = $wunderapi->simpleforecast->forecastday[0]->high->fahrenheit;
             
+            $prefix = "there will be";
+            if (strpos(strtolower($cond), "chance") !== false)
+            {
+                $prefix = "there is a";
+            }
+            else
+            {
+                if (substr($cond, strlen($cond) - 1, 1) == "m")
+                    $cond = $cond . "s";
+            }
+
             if ($pop >= 40)
             {
                 $client = new TwilioRestClient($AccountSid, $AuthToken);
@@ -39,7 +50,7 @@
                     "POST", array(
                     "To" => $row['phonenumber'],
                     "From" => $PhoneNumber,
-                    "Body" => "You should bring your umbrella today. There is a $pop% chance of precipitation."
+                    "Body" => $prefix . " " . $cond . " with a high of " . $high . " °F today. Bring your umbrella."
                 ));
             }
         }
