@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-    <title>dontforgetyourumbrella.com</title>
+    <title>Don't Forget Your Umbrella!</title>
     <link rel="stylesheet" href="/inc/stylesheet.css" />
     <script type="text/javascript" src="/inc/util-functions.js"></script>
     <script type="text/javascript" src="/inc/clear-default-text.js"></script>
@@ -12,16 +12,17 @@
         
         if ($pop != null)
         {
-            echo "<h1><span class='light'>there is a " . $pop . "% chance of <a href='/'>precipitation</a> today in " . $city . ", " . $state . ".</span> ";
+            echo "<span class='forecast'>there is a " . $pop . "% chance of precipitation today in " . $city . ", " . $state . ". </span>";
             if ($pop >= 40)
             {
-                echo "bring your <span class='purple'>umbrella</span>.</h1>\n";
+                echo "<span class='umbrella'>bring your <span class='yes'>umbrella</span>.</span><br />\n";
             }
             else
             {
-                echo "leave your <span class='purple'>umbrella</span> at home.</h1>\n";
+                echo "<span class='umbrella'>leave your <span class='no'>umbrella</span> at home.</span><br />\n";
             }
-            textlink();
+            
+            backlink();
         }
         else
         {
