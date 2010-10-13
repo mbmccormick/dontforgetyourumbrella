@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-    <title>dontforgetyourumbrella.com</title>
+    <title>Don't Forget Your Umbrella!</title>
     <link rel="stylesheet" href="/inc/stylesheet.css" />
     <script type="text/javascript" src="/inc/util-functions.js"></script>
     <script type="text/javascript" src="/inc/clear-default-text.js"></script>
@@ -24,8 +24,8 @@
                     if (substr($cond, strlen($cond) - 1, 1) == "m")
                         $cond = $cond . "s";
                 }
-                echo "<h1><span class='light'>" . $prefix . " <a href='/probability'>" . $cond . "</a> with a high of " . $high . "&deg;F <a href='/tomorrow'>today</a> in " . $city . ", " . $state . ".</span> ";
-                echo "bring your <span class='blue'>umbrella</span>.</h1>\n";
+                echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" . $cond . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
+                echo "<span class='umbrella'>bring your <span class='yes'>umbrella</span>. </span><br />\n";
             }
             else
             {
@@ -38,9 +38,10 @@
                 {
                     $prefix = "there will be a ";
                 }
-                echo "<h1><span class='light'>" . $prefix . " <a href='/probability'>" .  $cond . "</a> with a high of " . $high . "&deg;F <a href='/tomorrow'>today</a> in " . $city . ", " . $state . ".</span> ";
-                echo "leave your <span class='yellow'>umbrella</span> at home.</h1>\n";
+                echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" .  $cond . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
+                echo "<span class='umbrella'>leave your <span class='no'>umbrella</span> at home. </span><br />\n";
             }	
+            
             textlink();
         }
         else
