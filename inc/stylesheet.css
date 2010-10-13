@@ -5,24 +5,51 @@ body
     text-transform: uppercase;
 }
 
-h1
+.umbrella
 {
     font-size: 80px;
-    padding: 0px;
-    margin: 0px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.forecast
+{
+    font-size: 80px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.light
+{
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.form
+{
+    font-size: 80px;
+    font-weight: bold;
+    color: #000000;
+}
+
+a
+{
+    text-decoration: none;
+    color: #000000;
 }
 
 h2
 {
     padding: 0px;
     margin: 0px;
-    color: #7cd136;
+    color: #888888;
 }
 
-a
+h2 a
 {
     text-decoration: none;
-    color: #cccccc;
+    color: #888888;
 }
 
 p
@@ -35,12 +62,6 @@ p a
     color: #000000;
 }
 
-h2 a
-{
-    text-decoration: none;
-    color: #7cd136;
-}
-
 input[type=text]
 {
     font-size: 80px;
@@ -49,6 +70,7 @@ input[type=text]
     border-left: none;
     border-right: none;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 select
@@ -59,6 +81,7 @@ select
     border-left: none;
     border-right: none;
     text-transform: uppercase;
+    font-weight: bold;
 }
 
 input[type=submit]
@@ -71,6 +94,7 @@ input[type=submit]
     border: none;
     font-weight: bold;
     cursor: pointer;
+    font-weight: bold;
 }
 
 input[type=submit]:hover
@@ -78,47 +102,17 @@ input[type=submit]:hover
     background-color: #000000;
 }
 
-.blue
+.yes
 {
     color: #248eff;
 }
 
-.yellow
+.no
 {
     color: #248eff;
-}
-
-.light
-{
-    color: #cccccc;
 }
 
 .red
 {
-    color: #248eff;
-}
-
-.green
-{
-    color: #248eff;
-}
-
-.pink
-{
-    color: #248eff;
-}
-
-.orange
-{
-    color: #248eff;
-}
-
-.fuscia
-{
-    color: #248eff;
-}
-
-.purple
-{
-    color: #248eff;
+    color: red;
 }
