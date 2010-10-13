@@ -29,7 +29,7 @@
         "POST", array(
         "To" => $_POST['phonenumber'],
         "From" => $PhoneNumber,
-        "Body" => "This number is now signed up for reminders from http://dontforgetyourumbrella.com."
+        "Body" => "This number is now signed up for notifications from http://dontforgetyourumbrella.com."
     ));
     
     header("Location: http://dontforgetyourumbrella.com/success.php");
