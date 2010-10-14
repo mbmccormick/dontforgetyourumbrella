@@ -6,7 +6,8 @@
 
     if (substr($_POST[Body], 0, 1) == "f")
     {
-        $zipcode = explode(" ", $_POST[Body])[1];
+        $params = explode(" ", $_POST[Body]);
+        $zipcode = $params[1];
         $geocode = simplexml_load_file("http://maps.googleapis.com/maps/api/geocode/xml?sensor=false&address=" . $zipcode);
         $city = $geocode->result->address_component[1]->long_name;
         
