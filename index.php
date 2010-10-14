@@ -14,10 +14,10 @@
         {
             if ($pop >= 40)
             {
-                $prefix = "there will be";
+                $prefix = "There will be";
                 if (strpos(strtolower($cond), "chance") !== false)
                 {
-                    $prefix = "there is a";
+                    $prefix = "There is a";
                 }
                 else
                 {
@@ -25,21 +25,21 @@
                         $cond = $cond . "s";
                 }
                 echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" . $cond . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
-                echo "<span class='umbrella'>bring your <span class='yes'>umbrella</span>. </span><br />\n";
+                echo "<span class='umbrella'>Bring your <span class='yes'>umbrella</span>. </span><br />\n";
             }
             else
             {
-                $prefix = "it will be";
+                $prefix = "It will be";
                 if (strpos(strtolower($cond), "chance") !== false)
                 {
-                    $prefix = "there is a ";
+                    $prefix = "There is a ";
                 }
                 if (strpos(strtolower($cond), "thunderstorm") !== false)
                 {
-                    $prefix = "there will be a ";
+                    $prefix = "There will be a ";
                 }
                 echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" .  $cond . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
-                echo "<span class='umbrella'>leave your <span class='no'>umbrella</span> at home. </span><br />\n";
+                echo "<span class='umbrella'>Leave your <span class='no'>umbrella</span> at home. </span><br />\n";
             }	
             
             textlink();
