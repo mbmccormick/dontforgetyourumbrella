@@ -12,14 +12,14 @@
         
         if ($pop != null)
         {
-            echo "<span class='forecast'>there is a " . $pop . "% chance of precipitation today in " . $city . ", " . $state . ". </span>";
+            echo "<span class='forecast'>There is a " . $pop . "% chance of precipitation today in " . $city . ", " . $state . ". </span>";
             if ($pop >= 40)
             {
-                echo "<span class='umbrella'>bring your <span class='yes'>umbrella</span>.</span><br />\n";
+                echo "<span class='umbrella'>Bring your <span class='yes'>umbrella</span>.</span><br />\n";
             }
             else
             {
-                echo "<span class='umbrella'>leave your <span class='no'>umbrella</span> at home.</span><br />\n";
+                echo "<span class='umbrella'>Leave your <span class='no'>umbrella</span> at home.</span><br />\n";
             }
             
             backlink();
