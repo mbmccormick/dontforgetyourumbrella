@@ -1,5 +1,6 @@
 <?php
 
+    require "config.php";
     require "lib/twilio.php";
     
     include("lib/geoipcity.inc");
