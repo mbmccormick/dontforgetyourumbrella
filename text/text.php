@@ -40,7 +40,7 @@
                     if (substr($cond, strlen($cond) - 1, 1) == "m")
                         $cond = $cond . "s";
                 }
-                $message = $prefix . " " . strtolower($cond) . " with a high of " . $high . "°F today in " . $city . ", " . $state . ". Bring your umbrella.";
+                $message = $prefix . " " . strtolower($cond) . " with a high of " . $high . "F today in " . $city . ", " . $state . ". Bring your umbrella.";
             }
             else
             {
@@ -53,7 +53,7 @@
                 {
                     $prefix = "There will be a ";
                 }
-                $message = $prefix . " " . strtolower($cond) . " with a high of " . $high . "°F today in " . $city . ", " . $state . ". Leave your umbrella at home.";
+                $message = $prefix . " " . strtolower($cond) . " with a high of " . $high . "F today in " . $city . ", " . $state . ". Leave your umbrella at home.";
             }
             
             // respond with forecast
