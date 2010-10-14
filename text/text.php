@@ -5,7 +5,7 @@
 
     $client = new TwilioRestClient($AccountSid, $AuthToken);
 
-    if (substr($_POST[Body], 0, 1) == "f")
+    if (substr(strtolower($_POST[Body]), 0, 1) == "f")
     {
         $params = explode(" ", $_POST[Body]);
         $zipcode = $params[1];
