@@ -1,14 +1,11 @@
 <?php
 
-    require "../lib/twilio.php";
-    require "../config.php";
+    include("service.php");
 
     $client = new TwilioRestClient($AccountSid, $AuthToken);
 
     if (strpos(trim(strtolower($_POST[Body])), "f") == 0)
     {
-        include("../service.php");
-
         if ($pop != null)
         {
             if ($pop >= 40)
