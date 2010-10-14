@@ -78,7 +78,7 @@
         $number1 = str_replace("+1", "", $_POST[From]);
         $number2 = $_POST[From];
         
-        $sql = "DELETE FROM notify WHERE phonenumber = '$number1' OR phonenumber = '$number2')";
+        $sql = "DELETE FROM notify WHERE phonenumber = '$number1' OR phonenumber = '$number2'";
         
         mysql_close();
         

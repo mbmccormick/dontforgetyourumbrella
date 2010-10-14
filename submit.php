@@ -13,9 +13,12 @@
     mysql_select_db("$Database", $con);        
     
     $now = date("Y-m-d H:i:s");
+    
+    $phone = str_replace("-", "", $_POST[phonenumber]);
+    $phone = str_replace(".", "", $_POST[phonenumber]);
         
     $sql = "INSERT INTO notify (phonenumber, zipcode, time, timezone, createddate) VALUES
-                ('$_POST[phonenumber]', '$_POST[zipcode]', '$_POST[time]', '$_POST[timezone]', '$now')";
+                ('" . $phone . "', '$_POST[zipcode]', '$_POST[time]', '$_POST[timezone]', '$now')";
     
     if (!mysql_query($sql,$con))
     {
