@@ -38,7 +38,7 @@
                 {
                     $prefix = "There will be a ";
                 }
-                echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" .  strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
+                echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
                 echo "<span class='umbrella'>Leave your <span class='no'>umbrella</span> at home. </span><br />\n";
             }	
             

@@ -1,7 +1,8 @@
 <?php
     
-    include("service.php");
     require "config.php";
+    
+    include("service.php");
     
     $con = mysql_connect($Server, $Username, $Password);
     if (!$con)

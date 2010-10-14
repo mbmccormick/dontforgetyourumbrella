@@ -10,9 +10,7 @@ dontforgetyourumbrella is a small web application that retreives weather forecat
 
 ## Installation
 
-This service is designed to be run on a LAMP development platform. The scripts and configuration files cannot be run through a desktop environment. One cron job is also needed in order to keep the application running.
-
-User account information, including cell phone numbers and zip codes, are stored in one MySQL database.
+This service is designed to be run on a LAMP development platform. The scripts and configuration files cannot be run through a desktop environment.
 
 
 ## Usage

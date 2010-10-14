@@ -1,8 +1,9 @@
 <?php
 
+    require "lib/twilio.php";
+    
     include("lib/geoipcity.inc");
     include("lib/geoipregionvars.php");
-    require "lib/twilio.php";
         
     $ip = $_SERVER["REMOTE_ADDR"];
     $geo = geoip_open("/home/mattps/dontforgetyourumbrella.com/lib/GeoLiteCity.dat", GEOIP_STANDARD);
