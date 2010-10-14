@@ -1,6 +1,7 @@
 <?php
 
     require "../config.php";
+    require "../lib/twilio.php";
 
     $client = new TwilioRestClient($AccountSid, $AuthToken);
 
