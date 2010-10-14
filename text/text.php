@@ -1,10 +1,12 @@
 <?php
 
+    $zipcode = explode(" ", $_POST[Body])[1];
+
     include("../service.php");
 
     $client = new TwilioRestClient($AccountSid, $AuthToken);
 
-    if (strpos(trim(strtolower($_POST[Body])), "f") == 0)
+    if (substr($_POST[Body], 0, 1) == "f")
     {
         if ($pop != null)
         {

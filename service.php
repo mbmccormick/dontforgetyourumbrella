@@ -14,7 +14,7 @@
     $state = $record->region;
     $zipcode = $record->postal_code;
 
-    if($_GET[zipcode] != null)
+    if($_GET[zipcode] != null || $zipcode != null)
     {
         $zipcode = $_GET[zipcode];
         $geocode = simplexml_load_file("http://maps.googleapis.com/maps/api/geocode/xml?sensor=false&address=" . $zipcode);
