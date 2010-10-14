@@ -79,6 +79,10 @@
         $number2 = $_POST[From];
         
         $sql = "DELETE FROM notify WHERE phonenumber = '$number1' OR phonenumber = '$number2'";
+        if (!mysql_query($sql,$con))
+        {
+            die('Error: ' . mysql_error());
+        }
         
         mysql_close();
         
