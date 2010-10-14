@@ -29,7 +29,7 @@
                     if (substr($cond, strlen($cond) - 1, 1) == "m")
                         $cond = $cond . "s";
                 }
-                echo "<span class='forecast'>" . $prefix . " " . $cond . " with a high of " . $high . "&deg;F tomorrow in " . $city . ", " . $state . ". </span>";
+                echo "<span class='forecast'>" . $prefix . " " . strtolower($cond) . " with a high of " . $high . "&deg;F tomorrow in " . $city . ", " . $state . ". </span>";
                 echo "<span class='umbrella'>Bring your <span class='yes'>umbrella</span>.</span><br />\n";
             }
             else
@@ -43,7 +43,7 @@
                 {
                     $prefix = "There will be a ";
                 }
-                echo "<span class='forecast'>" . $prefix . " " .  $cond . " with a high of " . $high . "&deg;F tomorrow in " . $city . ", " . $state . ". </span>";
+                echo "<span class='forecast'>" . $prefix . " " .  strtolower($cond) . " with a high of " . $high . "&deg;F tomorrow in " . $city . ", " . $state . ". </span>";
                 echo "<span class='umbrella'>Leave your <span class='no'>umbrella</span> at home.</span><br />\n";
             }	
             
