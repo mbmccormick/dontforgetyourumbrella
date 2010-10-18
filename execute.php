@@ -42,7 +42,7 @@
                     $cond = $cond . "s";
             }
 
-            if ($pop >= 40)
+            if ($pop >= $Threshold)
             {
                 $client = new TwilioRestClient($AccountSid, $AuthToken);
 

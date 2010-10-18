@@ -28,7 +28,7 @@
         
         if ($pop != null)
         {
-            if ($pop >= 40)
+            if ($pop >= $Threshold)
             {
                 $prefix = "There will be";
                 if (strpos(strtolower($cond), "chance") !== false)

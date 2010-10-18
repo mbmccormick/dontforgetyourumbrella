@@ -14,4 +14,7 @@
     $Password = "yourpassword";
     $Database = "yourdatabase";
     
+    // application settings
+    $Threshold = 35;
+    
 ?>

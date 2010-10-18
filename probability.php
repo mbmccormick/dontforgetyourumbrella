@@ -13,7 +13,7 @@
         if ($pop != null)
         {
             echo "<span class='forecast'>There is a " . $pop . "% chance of precipitation today in " . $city . ", " . $state . ". </span>";
-            if ($pop >= 40)
+            if ($pop >= $Threshold)
             {
                 echo "<span class='umbrella'>Bring your <span class='yes'>umbrella</span>.</span><br />\n";
             }
