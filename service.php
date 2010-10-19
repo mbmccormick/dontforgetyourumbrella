@@ -36,12 +36,18 @@
     
     function textlink()
     {
-        echo "<br /><br /><h2><a href='/text'>Sign up for text message notifications.</a></h2><br />";
+        if ($_SERVER[QUERY_STRING] != null)
+            echo "<br /><br /><h2><a href='/text?$_SERVER[QUERY_STRING]'>Sign up for text message notifications.</a></h2><br />";
+        else
+            echo "<br /><br /><h2><a href='/text'>Sign up for text message notifications.</a></h2><br />";
     }
     
     function backlink()
     {
-        echo "<br /><br /><h2><a href='/'>Click here to go back.</a></h2><br />";
+        if ($_SERVER[QUERY_STRING] != null)
+            echo "<br /><br /><h2><a href='/?$_SERVER[QUERY_STRING]'>Click here to go back.</a></h2><br />";
+        else
+            echo "<br /><br /><h2><a href='/'>Click here to go back.</a></h2><br />";
     }
     
     function error()

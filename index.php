@@ -24,7 +24,10 @@
                     if (substr($cond, strlen($cond) - 1, 1) == "m")
                         $cond = $cond . "s";
                 }
-                echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
+                if ($_SERVER[QUERY_STRING] != null)
+                    echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability?$_SERVER[QUERY_STRING]'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow?$_SERVER[QUERY_STRING]'>today</a> in " . $city . ", " . $state . ". </span>\n";
+                else
+                    echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
                 echo "<span class='umbrella'>Bring your <span class='yes'>umbrella</span>. </span><br />\n";
             }
             else
@@ -38,7 +41,10 @@
                 {
                     $prefix = "There will be a ";
                 }
-                echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
+                if ($_SERVER[QUERY_STRING] != null)
+                    echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability?$_SERVER[QUERY_STRING]'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow?$_SERVER[QUERY_STRING]'>today</a> in " . $city . ", " . $state . ". </span>\n";
+                else
+                    echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
                 echo "<span class='umbrella'>Leave your <span class='no'>umbrella</span> at home. </span><br />\n";
             }	
             

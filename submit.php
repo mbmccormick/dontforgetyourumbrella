@@ -36,7 +36,11 @@
         "Body" => "This number is now signed up for notifications from http://dontforgetyourumbrella.com."
     ));
     
-    header("Location: http://dontforgetyourumbrella.com/success.php");
+    if ($_SERVER[QUERY_STRING] != null)
+        header("Location: http://dontforgetyourumbrella.com/success.php?$_SERVER[QUERY_STRING]");
+    else
+        header("Location: http://dontforgetyourumbrella.com/success.php");
+    
     exit;   
     
 ?>

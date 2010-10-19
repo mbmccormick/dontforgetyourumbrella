@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="/inc/stylesheet.css" />
     <script type="text/javascript" src="/inc/util-functions.js"></script>
     <script type="text/javascript" src="/inc/clear-default-text.js"></script>
-    <meta http-equiv="refresh" content="5; url=http://dontforgetyourumbrella.com/" />
+    <meta http-equiv="refresh" content="5; url=http://dontforgetyourumbrella.com/<?php if ($_SERVER[QUERY_STRING] != null) { echo "?$_SERVER[QUERY_STRING]"; } else { } ?>" />
 <body>
     <span class='forecast'>Hooray. Your settings have been saved. </span>
     <span class='umbrella'>You will receive a text message when you need your <span class='yes'>umbrella</span>.</span>

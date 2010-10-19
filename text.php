@@ -14,7 +14,14 @@
             $zipcode = "(zip)";
         
     ?>
-	<form action='/submit.php' method='post'>
+    <?php 
+    
+        if ($_SERVER[QUERY_STRING]) != null)
+            echo "<form action='/submit.php?$_SERVER[QUERY_STRING]' method='post'>";
+        else
+            echo "<form action='/submit.php' method='post'>";
+            
+    ?>
         <div class='form'>
 		    A text message will be sent to <input name='phonenumber' type='text' class='cleardefault' style='width: 460px;' value='(phone)' /> 
 		    at 
