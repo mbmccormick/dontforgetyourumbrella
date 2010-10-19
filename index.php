@@ -65,7 +65,8 @@
         function changeLoc()
         {
             var zipcode = prompt("Please enter your zip code.");
-            location.href = "http://dontforgetyourumbrella.com/?zipcode=" + zipcode;
+            if (zipcode != null)
+                location.href = "http://dontforgetyourumbrella.com/?zipcode=" + zipcode;
         }
     
     </script>
