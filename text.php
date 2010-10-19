@@ -45,10 +45,7 @@
 		</div>
     </form>
     <br />
-    <br />
-    <br />
-    <h2><a href='/'>Click here to go back.</a></h2>
-    <br />
+    <?php backlink(); ?>
     <br />
     <br />
     <p>Copyright &copy; 2010 <a style="text-decoration: none;" href="http://www.mccormicktechnologies.com/" target="_blank">McCormick Technologies LLC</a>. All rights reserved.</p>
