@@ -42,9 +42,9 @@
                     $prefix = "There will be a ";
                 }
                 if ($_SERVER[QUERY_STRING] != null)
-                    echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability?$_SERVER[QUERY_STRING]'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow?$_SERVER[QUERY_STRING]'>today</a> in " . $city . ", " . $state . ". </span>\n";
+                    echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability?$_SERVER[QUERY_STRING]'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow?$_SERVER[QUERY_STRING]'>today</a> in <a onclick='changeLoc()' title='Click here to change your location.'>" . $city . ", " . $state . "</a>. </span>\n";
                 else
-                    echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in " . $city . ", " . $state . ". </span>\n";
+                    echo "<span class='forecast'>" . $prefix . " <a title='Click here to view the probability of precipitation.' href='/probability'>" . strtolower($cond) . "</a> with a high of " . $high . "&deg;F <a title='Click here to view the forecast for tomorrow.' href='/tomorrow'>today</a> in <a onclick='changeLoc()' title='Click here to change your location.'>" . $city . ", " . $state . "</a>. </span>\n";
                 echo "<span class='umbrella'>Leave your <span class='no'>umbrella</span> at home. </span><br />\n";
             }	
             
@@ -59,5 +59,15 @@
     <br />
     <br />
     <p>Copyright &copy; 2010 <a style="text-decoration: none;" href="http://www.mccormicktechnologies.com/" target="_blank">McCormick Technologies LLC</a>. All rights reserved.</p>
+    
+    <script type="text/javascript">
+    
+        function changeLoc()
+        {
+            var zipcode = prompt("Please enter your zip code.");
+            location.href = "http://dontforgetyourumbrella.com/?zipcode=" + zipcode;
+        }
+    
+    </script>
 </body>
 </html>
