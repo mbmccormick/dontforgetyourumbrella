@@ -16,7 +16,7 @@
     ?>
     <?php 
     
-        if ($_SERVER[QUERY_STRING]) != null)
+        if ($_SERVER[QUERY_STRING] != null)
             echo "<form action='/submit.php?$_SERVER[QUERY_STRING]' method='post'>";
         else
             echo "<form action='/submit.php' method='post'>";
