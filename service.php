@@ -19,14 +19,14 @@
         $zipcode = $_GET[zipcode];
         $geocode = simplexml_load_file("http://maps.googleapis.com/maps/api/geocode/xml?sensor=false&address=" . $zipcode);
         $city = $geocode->result->address_component[1]->long_name;
-        if ($geocode->result->address_component[2]->type == "administrative_area_level_1")
-            $state = $geocode->result->address_component[2]->short_name;
-        else if ($geocode->result->address_component[3]->type == "administrative_area_level_1")
-            $state = $geocode->result->address_component[3]->short_name;
-        else if ($geocode->result->address_component[4]->type == "administrative_area_level_1")
-            $state = $geocode->result->address_component[4]->short_name;
-        else if ($geocode->result->address_component[5]->type == "administrative_area_level_1")
-            $state = $geocode->result->address_component[5]->short_name;
+        for ($i = 2; $i < 6; $i++)
+        {
+            if ($geocode->result->address_component[$i]->type == "administrative_area_level_1")
+            {
+                $state = $geocode->result->address_component[$i]->short_name;
+                break;
+            }
+        }
     }
 
     $wunderapi = simplexml_load_file("http://api.wunderground.com/auto/wui/geo/ForecastXML/index.xml?query=" . $zipcode);
