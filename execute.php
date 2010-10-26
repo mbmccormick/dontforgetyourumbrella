@@ -22,7 +22,7 @@
         
         $due = date("Y-m-d H:i:s", strtotime(date("Y-m-d") . "0" . $row[time] . ":00:00"));
         
-        echo date($nowlcl, "-5 minutes") . " < " . $due . " < " . date($nowlcl, "+5 minutes") . "<br />\n";
+        echo date("Y-m-d H:i:s", strtotime("-5 minute", strtotime($nowlcl))) . " < " . $due . " < " . date("Y-m-d H:i:s", strtotime("+5 minute", strtotime($nowlcl))) . "<br />\n";
         
         if (date($nowlcl, "-5 minutes") < $due && $due < date($nowlcl, "+5 minutes"))
         {
