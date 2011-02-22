@@ -32,6 +32,6 @@
     ?>
     <br />
     <br />
-    <p>Copyright &copy; 2010 <a style="text-decoration: none;" href="http://www.mccormicktechnologies.com/" target="_blank">McCormick Technologies LLC</a>. All rights reserved.</p>
+    <p>&copy; 2011 <a style="text-decoration: none;" href="http://www.mccormicktechnologies.com/" target="_blank">McCormick Technologies</a></p>
 </body>
 </html>
