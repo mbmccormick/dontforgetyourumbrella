@@ -3,7 +3,7 @@
     // twilio API settings
     $ApiVersion = "2010-04-01";
     $AccountSid = "AC********************************";
-	$AuthToken = "********************************";
+    $AuthToken = "********************************";
     
     // twilio phone number
     $PhoneNumber = "***-***-****";
