@@ -37,9 +37,9 @@
     ));
     
     if ($_SERVER[QUERY_STRING] != null)
-        header("Location: http://dontforgetyourumbrella.com/success.php?$_SERVER[QUERY_STRING]");
+        header("Location: success.php?$_SERVER[QUERY_STRING]");
     else
-        header("Location: http://dontforgetyourumbrella.com/success.php");
+        header("Location: success.php");
     
     exit;   
     
