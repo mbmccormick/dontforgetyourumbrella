@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
     <title>Don't Forget Your Umbrella!</title>
-    <link rel="stylesheet" href="/inc/stylesheet.css" />
-    <script type="text/javascript" src="/inc/util-functions.js"></script>
-    <script type="text/javascript" src="/inc/clear-default-text.js"></script>
+    <link rel="stylesheet" href="inc/stylesheet.css" />
+    <script type="text/javascript" src="inc/util-functions.js"></script>
+    <script type="text/javascript" src="inc/clear-default-text.js"></script>
 <body>
     <?php
         
@@ -17,9 +17,9 @@
     <?php 
     
         if ($_SERVER[QUERY_STRING] != null)
-            echo "<form action='/submit.php?$_SERVER[QUERY_STRING]' method='post'>";
+            echo "<form action='submit.php?$_SERVER[QUERY_STRING]' method='post'>";
         else
-            echo "<form action='/submit.php' method='post'>";
+            echo "<form action='submit.php' method='post'>";
             
     ?>
         <div class='form'>
