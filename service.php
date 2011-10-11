@@ -7,7 +7,7 @@
     include("lib/geoipregionvars.php");
         
     $ip = $_SERVER["REMOTE_ADDR"];
-    $geo = geoip_open("/home/mattps/dontforgetyourumbrella.com/lib/GeoLiteCity.dat", GEOIP_STANDARD);
+    $geo = geoip_open("lib/GeoLiteCity.dat", GEOIP_STANDARD);
 
     $record = geoip_record_by_addr($geo, $ip);
     $city = $record->city;
@@ -37,17 +37,17 @@
     function textlink()
     {
         if ($_SERVER[QUERY_STRING] != null)
-            echo "<br /><br /><h2><a href='/text?$_SERVER[QUERY_STRING]'>Sign up for text message notifications.</a></h2><br />";
+            echo "<br /><br /><h2><a href='text.php?$_SERVER[QUERY_STRING]'>Sign up for text message notifications.</a></h2><br />";
         else
-            echo "<br /><br /><h2><a href='/text'>Sign up for text message notifications.</a></h2><br />";
+            echo "<br /><br /><h2><a href='text.php'>Sign up for text message notifications.</a></h2><br />";
     }
     
     function backlink()
     {
         if ($_SERVER[QUERY_STRING] != null)
-            echo "<br /><br /><h2><a href='/?$_SERVER[QUERY_STRING]'>Click here to go back.</a></h2><br />";
+            echo "<br /><br /><h2><a href='index.php?$_SERVER[QUERY_STRING]'>Click here to go back.</a></h2><br />";
         else
-            echo "<br /><br /><h2><a href='/'>Click here to go back.</a></h2><br />";
+            echo "<br /><br /><h2><a href='index.php'>Click here to go back.</a></h2><br />";
     }
     
     function error()
